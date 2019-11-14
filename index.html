@@ -23,6 +23,7 @@
 
         .screenshots div {
             flex-basis: 48%;
+            padding-bottom: 2vw;
         }
 
         h1 {
@@ -38,11 +39,11 @@
         </div>
         <div id="header-logo-background" style="width: 100vw; position: fixed; top: 15vw; z-index: 1;">
             <div id="header-logo" style="width: 80%; margin: 0 auto; padding: 2vw 0 3vw 0">
-                <img src="logo.png" width="100%" alt="">
+                <img src="logo.webp" width="100%" alt="">
             </div>
         </div>
         <div id="header-foreground" style="position: absolute; z-index: 2;">
-            <img src="header-foreground.png" width="100%" alt="">
+            <img src="header-foreground.webp" width="100%" alt="">
         </div>
     </header>
     <div class="content" style="width: 80%; margin: 0 auto">
@@ -62,12 +63,12 @@
         </section>
         <h1>SCREENSHOTS</h1>
         <section class="screenshots">
-            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
-            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
-            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
-            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
-            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
-            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
+            <div> <a href="s1.jpg" target="_blank"> <img src="t1.jpg" width="100%" alt=""> </div> </a>
+            <div> <a href="s2.jpg" target="_blank"> <img src="t2.jpg" width="100%" alt=""> </div>
+            <div> <a href="s3.jpg" target="_blank"> <img src="t3.jpg" width="100%" alt=""> </div>
+            <div> <a href="s4.jpg" target="_blank"> <img src="t4.jpg" width="100%" alt=""> </div>
+            <div> <a href="s5.jpg" target="_blank"> <img src="t5.jpg" width="100%" alt=""> </div>
+            <div> <a href="s1.jpg" target="_blank"> <img src="t1.jpg" width="100%" alt=""> </div>
         </section>
     </div>
     <footer style="margin: 3vw;">
@@ -89,8 +90,8 @@
             logoBg.style.background = currentScroll == 1 ? "linear-gradient(0deg, rgba(35,42,51,0) 0%, rgba(35,42,51,1) 20%)" : null;
             logoDv.style.width = width + "%"
         }
-        addEventListener("resize", calculate)
-        addEventListener("scroll", calculate)
+        addEventListener("resize", () => window.requestAnimationFrame(calculate))
+        addEventListener("scroll", () => window.requestAnimationFrame(calculate))
     </script>
 </body>
 
