@@ -21,9 +21,14 @@
             justify-content: space-between;
         }
 
-        .screenshots div {
+        .screenshots a {
             flex-basis: 48%;
-            padding-bottom: 2vw;
+            margin-bottom: 2vw;
+            border: 1px solid #464d66;
+        }
+
+        .screenshots a:hover {
+            border: 1px solid #adaac5;
         }
 
         h1 {
@@ -35,15 +40,15 @@
 <body style="background-color: #232a33;">
     <header style="height: 56.25%; padding-bottom: 60%;">
         <div id="header-background" style="position: absolute; width: 100%;">
-            <img src="header-background.jpg" width="100%" alt="">
+            <img src="header-background.jpg" width="100%">
         </div>
         <div id="header-logo-background" style="width: 100vw; position: fixed; top: 15vw; z-index: 1;">
             <div id="header-logo" style="width: 80%; margin: 0 auto; padding: 2vw 0 3vw 0">
-                <img src="logo.webp" width="100%" alt="">
+                <img src="logo.webp" width="100%">
             </div>
         </div>
         <div id="header-foreground" style="position: absolute; width: 100%; z-index: 2;">
-            <img src="header-foreground.webp" width="100%" alt="">
+            <img src="header-foreground.webp" width="100%">
         </div>
     </header>
     <div class="content" style="width: 80%; margin: 0 auto">
@@ -63,12 +68,12 @@
         </section>
         <h1>SCREENSHOTS</h1>
         <section class="screenshots">
-            <div> <a href="s1.jpg" target="_blank"> <img src="t1.jpg" width="100%" alt=""> </a> </div>
-            <div> <a href="s2.jpg" target="_blank"> <img src="t2.jpg" width="100%" alt=""> </a> </div>
-            <div> <a href="s3.jpg" target="_blank"> <img src="t3.jpg" width="100%" alt=""> </a> </div>
-            <div> <a href="s4.jpg" target="_blank"> <img src="t4.jpg" width="100%" alt=""> </a> </div>
-            <div> <a href="s5.jpg" target="_blank"> <img src="t5.jpg" width="100%" alt=""> </a> </div>
-            <div> <a href="s1.jpg" target="_blank"> <img src="t1.jpg" width="100%" alt=""> </a> </div>
+            <a href="s1.jpg" target="_blank"> <img src="t1.jpg" width="100%" height="100%"> </a>
+            <a href="s2.jpg" target="_blank"> <img src="t2.jpg" width="100%" height="100%"> </a>
+            <a href="s3.jpg" target="_blank"> <img src="t3.jpg" width="100%" height="100%"> </a>
+            <a href="s4.jpg" target="_blank"> <img src="t4.jpg" width="100%" height="100%"> </a>
+            <a href="s5.jpg" target="_blank"> <img src="t5.jpg" width="100%" height="100%"> </a>
+            <a href="s1.jpg" target="_blank"> <img src="t1.jpg" width="100%" height="100%"> </a>
         </section>
     </div>
     <footer style="margin: 3vw;">
