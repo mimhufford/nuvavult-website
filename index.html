@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NUVAVULT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .screenshots div {
+            flex-basis: 48%;
+        }
+
+        h1 {
+            margin: 6vw 0 3vw 0;
+        }
+    </style>
+</head>
+
+<body style="background-color: #232a33;">
+    <header style="height: 56.25%; padding-bottom: 60%;">
+        <div id="header-background" style="position: absolute;">
+            <img src="header-background.jpg" width="100%" alt="">
+        </div>
+        <div id="header-logo-background" style="width: 100%; position: fixed; top: 15vw;">
+            <div id="header-logo" style="width: 80%; margin: 0 auto; padding: 2vw 0 3vw 0">
+                <img src="logo.png" width="100%" alt="">
+            </div>
+        </div>
+        <div id="header-foreground" style="position: absolute;">
+            <img src="header-foreground.png" width="100%" alt="">
+        </div>
+    </header>
+    <div class="content" style="width: 80%; margin: 0 auto">
+        <h1>TRAILER</h1>
+        <section class="trailer">
+            <img src="header-background.jpg" width="100%" alt="">
+        </section>
+        <h1>GET IT NOW</h1>
+        <section>
+            <div style="width: 646px; margin: 0 auto;">
+                <iframe src="https://store.steampowered.com/widget/1171160/" frameborder="0" width="100%"
+                    height="190"></iframe>
+            </div>
+        </section>
+        <h1>SCREENSHOTS</h1>
+        <section class="screenshots">
+            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
+            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
+            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
+            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
+            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
+            <div> <img src="header-background.jpg" width="100%" alt=""> </div>
+        </section>
+    </div>
+    <footer style="margin: 3vw;">
+        <div> A game by <a href="https://github.com/mimhufford">Mim Hufford</a> </div>
+        <br>
+        <div> <a href="https://steamcommunity.com/app/1171160">Discuss</a> on Steam </div>
+    </footer>
+
+    <script>
+        const lerp = (a, b, f) => (a * (1 - f)) + (b * f)
+        const logoBg = document.getElementById("header-logo-background")
+        const logoDv = document.getElementById("header-logo")
+        const calculate = () => {
+            const fullScroll = window.innerWidth / 16 * 9
+            const currentScroll = Math.min(window.scrollY / fullScroll, 1)
+            const top = lerp(15, 0, currentScroll)
+            const width = lerp(80, 20, currentScroll)
+            logoBg.style.top = top + "vw"
+            logoBg.style.background = currentScroll == 1 ? "linear-gradient(0deg, rgba(35,42,51,0) 0%, rgba(35,42,51,1) 20%)" : null;
+            logoDv.style.width = width + "%"
+        }
+        addEventListener("resize", calculate)
+        addEventListener("scroll", calculate)
+    </script>
+</body>
+
+</html>
