@@ -38,7 +38,7 @@
     </style>
 </head>
 
-<body style="background-color: #232a33;">
+<body style="background-color: #08090b; background-image: url(bg.jpg); background-size: 100%; ">
     <header style="height: 56.25%; padding-bottom: 56.25%;">
         <div id="header-background" style="position: absolute; width: 100%;">
             <img src="header-background.jpg" width="100%">
@@ -101,7 +101,7 @@
             const top = lerp(15, 0, currentScroll)
             const width = lerp(80, 20, currentScroll)
             logoBg.style.top = top + "vw"
-            logoBg.style.background = currentScroll == 1 ? "linear-gradient(0deg, rgba(35,42,51,0) 0%, rgba(35,42,51,1) 20%)" : null;
+            logoBg.style.background = currentScroll == 1 ? "linear-gradient(0deg, #08090b00 0%, #08090bff 80%)" : null;
             logoDv.style.width = width + "%"
         }
         addEventListener("resize", () => window.requestAnimationFrame(calculate))
